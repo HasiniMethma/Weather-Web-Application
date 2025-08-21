@@ -37,13 +37,19 @@ searchCity.addEventListener("keypress", e => {
 function setValues(values) {
     document.getElementById("city_name").innerText = values.location.name + ", " + values.location.region + ", " + values.location.country;
     document.getElementById("current-temp").innerText = Math.round(values.current.temp_c);
-    document.getElementById("current-condi-icon").src = "https:" + values.current.condition.icon;
     document.getElementById("current-condition").innerText = values.current.condition.text;
-    document.getElementById("Feels-like").innerText = "Feels like "+Math.round(values.current.feelslike_c)+" °C";
+    document.getElementById("current_condi_icon").src = "https:" + values.current.condition.icon;
+    document.getElementById("wind").innerText = Math.round(values.current.wind_kph)+" km/h";
+    document.getElementById("Humidity").innerText = Math.round(values.current.humidity)+" %";
+    document.getElementById("UV").innerText = Math.round(values.current.uv);
+    
+
+
 
 
 }
 callApi();
+
 
 
 
