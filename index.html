@@ -45,10 +45,10 @@
                     </div>
                     <div class="col-md-6 text-center mt-4 mt-md-0">
                         <div class="weather-icon display-1 mb-2">
-                            <img id="current_condi_icon" src="" alt="Weather Icon" width="90">
+                            <img id="current_condi_icon" src="assest/sunny.webp" width="90">
                         </div>
                         <p class="fs-5" id="current-condition">Sunny</p>
-                        <p class="text-light opacity-75" id="Feels-like">Feels like 24°C</p>
+                        <p class="text-light opacity-75" id="FeelsLike">Feels like 24°C</p>
                     </div>
                 </div>
                 <div class="row row-cols-2 row-cols-sm-4 g-3 mt-3">
@@ -88,7 +88,7 @@
                 <h2 class="fs-4 fw-bold mb-3 d-flex align-items-center">
                     <i class="fas fa-clock me-2 text-warning"></i> Hourly Forecast
                 </h2>
-                <div class="d-flex gap-3 pb-2 overflow-x-auto">
+                <div class="d-flex gap-3 pb-2 overflow-x-auto" id="hourly-forecast">
                     <div class="text-center" style="min-width: 80px;">
                         <p>Now</p>
                         <i class="fas fa-sun fs-3 my-2 text-warning"></i>
@@ -147,9 +147,9 @@
             <!-- 5-Day Forecast -->
             <div class="weather-card p-4 mb-4 rounded-4 animate-in" style="animation-delay: 0.2s;">
                 <h2 class="fs-4 fw-bold mb-3 d-flex align-items-center">
-                    <i class="fas fa-calendar-alt me-2 text-warning"></i> 5-Day Forecast
+                    <i class="fas fa-calendar-alt me-2 text-warning"></i> 7-Day Forecast
                 </h2>
-                <div class="d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-3" id="daily-forecast">
                     <div class="d-flex justify-content-between align-items-center p-3 bg-white bg-opacity-10 rounded-3">
                         <div class="d-flex align-items-center">
                             <p class="fw-medium" style="width: 100px;">Tomorrow</p>
@@ -217,15 +217,15 @@
                         </h2>
                         <div class="d-flex justify-content-around">
                             <div class="text-center">
-                                <div class="fs-2 mb-2">13</div>
+                                <div class="fs-2 mb-2" id="w_speed">13</div>
                                 <p class="text-light opacity-75">km/h</p>
                             </div>
                             <div class="text-center">
-                                <div class="fs-2 mb-2">ESE</div>
+                                <div class="fs-2 mb-2" id="Direction">ESE</div>
                                 <p class="text-light opacity-75">Direction</p>
                             </div>
                             <div class="text-center">
-                                <div class="fs-2 mb-2">1016</div>
+                                <div class="fs-2 mb-2" id="hPa">1016</div>
                                 <p class="text-light opacity-75">hPa</p>
                             </div>
                         </div>
@@ -239,11 +239,11 @@
                         <div class="d-flex justify-content-around">
                             <div class="text-center">
                                 <i class="fas fa-cloud-sun sunrise-icon text-warning fs-3 mb-2"></i>
-                                <div class="fs-5">6:04 AM</div>
+                                <div class="fs-5" id="Sunrise">6:04 AM</div>
                             </div>
                             <div class="text-center">
                                 <i class="fas fa-cloud-moon sunset-icon text-warning fs-3 mb-2"></i>
-                                <div class="fs-5">6:42 PM</div>
+                                <div class="fs-5" id="Sunset">6:42 PM</div>
                             </div>
                         </div>
                     </div>
