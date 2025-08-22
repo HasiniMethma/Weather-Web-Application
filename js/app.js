@@ -1,7 +1,9 @@
-console.log("js loading..");
+
+const defaultCity = "Colombo";
+const search = document.getElementById("txtSearch");
 
 function callApi(city) {
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=b1a7b07a8f5248e7bc370037251308&q=${city}&days=7&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=b1a7b07a8f5248e7bc370037251308&q=${city}&days=7&aqi=no&alerts=no`)
         .then(response => response.json())
         .then(data => {
             setValues(data); // call function to update UI
@@ -74,7 +76,7 @@ function callApi(city) {
             });
         })
 }
-callApi();
+
 
 // set date----------------------------- 
 let today = new Date;
@@ -98,7 +100,7 @@ searchCity.addEventListener("keypress", e => {
     if (e.key === "Enter") {
         let city = searchCity.value;
         console.log(city);
-        callApi(city);
+        if(city)callApi(city);
 
     }
 })
@@ -124,7 +126,7 @@ function setValues(values) {
     document.getElementById("Sunrise").innerText = values.forecast.forecastday[0].astro.sunrise;
     document.getElementById("Sunset").innerText = values.forecast.forecastday[0].astro.sunset;
 }
-callApi();
+callApi(defaultCity);
 
 
 
